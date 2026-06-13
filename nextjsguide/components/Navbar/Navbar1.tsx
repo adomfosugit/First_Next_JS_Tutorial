@@ -13,20 +13,21 @@ type Props = {}
 
 const Navbar1 = (props: Props) => {
   return (
-    <NavigationMenu>
-  <NavigationMenuList>
-    {Navlinks.map((i)=> (
-        <NavigationMenuItem>
-      <NavigationMenuTrigger>{i.name}</NavigationMenuTrigger>
-      <NavigationMenuContent>
-        <NavigationMenuLink >{i.Link}</NavigationMenuLink>
-      </NavigationMenuContent>
-    </NavigationMenuItem>
-
-    ))}
-    
-  </NavigationMenuList>
-</NavigationMenu>
+    <div className="w-full flex justify-center bg-blue-700 p-2">
+      <NavigationMenu className="max-w-full w-full">
+        <NavigationMenuList className="w-full justify-center">
+          {Navlinks.map((i) => (
+            <NavigationMenuItem key={i.name}>
+              <NavigationMenuTrigger>{i.name}</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <NavigationMenuLink>{i.Link}</NavigationMenuLink>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          ))}
+        </NavigationMenuList>
+      </NavigationMenu>
+    </div>
+  
   )
 }
 

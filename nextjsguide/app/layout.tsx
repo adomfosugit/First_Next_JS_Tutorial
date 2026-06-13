@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "First Next JS App",
+  title: "Inventory System",
   description: "This is a crash course on Next JS",
 };
 
@@ -30,7 +30,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex flex-col">
-        <Navbar />
+        {/*<Navbar /> */}
+
         <Navbar1 />
         {children}
         </body>
